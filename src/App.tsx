@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   const [employees, setEmployees] = useState(
+    // @ts-ignore
     JSON.parse(localStorage.getItem('employees')) || [
       {
         id: 1,
@@ -101,6 +102,7 @@ function App() {
   );
 
   const [selecteadTeam, setTeam] = useState(
+    // @ts-ignore
     JSON.parse(localStorage.getItem('selectedTeam')) || 'TeamB'
   );
 

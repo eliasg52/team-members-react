@@ -5,7 +5,7 @@ export const TeamMembers = ({
   employee,
   selecteadTeam,
   handleCliclEmployee,
-}) => {
+}: any) => {
   return (
     <div
       className={employee.teamName === selecteadTeam ? 'card standout' : 'card'}

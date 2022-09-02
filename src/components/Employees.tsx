@@ -6,7 +6,7 @@ export const Employees = ({
   employees,
   selecteadTeam,
   handleCliclEmployee,
-}) => {
+}: any) => {
   return (
     <main className="container">
       <div className="row justify-content-center mt-3 mb-3">
@@ -20,7 +20,7 @@ export const Employees = ({
       <div className="row justify-content-center mt-3 mb-3">
         <div className="col-8">
           <div className="card-collection">
-            {employees.map((employee) => {
+            {employees.map((employee: any) => {
               return (
                 <TeamMembers
                   key={employee.id}

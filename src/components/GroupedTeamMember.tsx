@@ -1,12 +1,16 @@
 import { useState } from 'react';
 
-export const GroupedTeamMember = ({ employees, selectedTeam, setTeam }) => {
+export const GroupedTeamMember = ({
+  employees,
+  selectedTeam,
+  setTeam,
+}: any) => {
   const [groupedEmployees, setgroupedEmployees] = useState(groupTeamMembers());
 
   function groupTeamMembers() {
     let teams = [];
     let teamAMembers = employees.filter(
-      (employee) => employee.teamName === 'TeamA'
+      (employee: any) => employee.teamName === 'TeamA'
     );
     let teamA = {
       team: 'TeamA',
@@ -16,7 +20,7 @@ export const GroupedTeamMember = ({ employees, selectedTeam, setTeam }) => {
     teams.push(teamA);
 
     let teamBMembers = employees.filter(
-      (employee) => employee.teamName === 'TeamB'
+      (employee: any) => employee.teamName === 'TeamB'
     );
     let teamB = {
       team: 'TeamB',
@@ -26,7 +30,7 @@ export const GroupedTeamMember = ({ employees, selectedTeam, setTeam }) => {
     teams.push(teamB);
 
     let teamCMembers = employees.filter(
-      (employee) => employee.teamName === 'TeamC'
+      (employee: any) => employee.teamName === 'TeamC'
     );
     let teamC = {
       team: 'TeamC',
@@ -36,7 +40,7 @@ export const GroupedTeamMember = ({ employees, selectedTeam, setTeam }) => {
     teams.push(teamC);
 
     let teamDMembers = employees.filter(
-      (employee) => employee.teamName === 'TeamD'
+      (employee: any) => employee.teamName === 'TeamD'
     );
     let teamD = {
       team: 'TeamD',
@@ -48,7 +52,7 @@ export const GroupedTeamMember = ({ employees, selectedTeam, setTeam }) => {
     return teams;
   }
 
-  function handleTeamClick(event) {
+  function handleTeamClick(event: any) {
     let transformedGroupData = groupedEmployees.map((groupedData) =>
       groupedData.team === event.currentTarget.id
         ? { ...groupedData, collapsed: !groupedData.collapsed }
@@ -79,7 +83,7 @@ export const GroupedTeamMember = ({ employees, selectedTeam, setTeam }) => {
             className={employee.collapsed === true ? 'collapse' : ''}
           >
             <hr />
-            {employee.members.map((member) => (
+            {employee.members.map((member: any) => (
               <div className="mt-2" key={member.id}>
                 <h5 className="card-tittle mt-2">
                   <span className="text-dark">

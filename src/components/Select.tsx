@@ -1,4 +1,4 @@
-export const Select = ({ handleOnChange, selecteadTeam }) => {
+export const Select = ({ handleOnChange, selecteadTeam }: any) => {
   return (
     <select
       className="form-select form-select-lg"

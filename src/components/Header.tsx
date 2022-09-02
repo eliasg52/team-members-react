@@ -1,6 +1,6 @@
 export const Header = ({ employees, selecteadTeam }: any) => {
   const numberOfEmployees = employees.filter(
-    (employee) => employee.teamName === selecteadTeam
+    (employee: any) => employee.teamName === selecteadTeam
   ).length;
 
   return (
